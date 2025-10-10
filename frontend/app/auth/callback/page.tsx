@@ -14,9 +14,9 @@ export default function AuthCallback() {
     const handleCallback = async () => {
       const token = searchParams.get('token');
       const success = searchParams.get('success');
-      const error = searchParams.get('error');
+      const error = searchParams.get('error');  
 
-      if (error) {
+      if (error) { 
         toast.error('Authentication failed. Please try again.');
         router.push('/');
         return;
