@@ -29,7 +29,9 @@
     "ace-builds": "^1.32.2",
     "react-hot-toast": "^2.4.1",
     "framer-motion": "^10.16.16",
-    "lucide-react": "^0.294.0"
+    "lucide-react": "^0.294.0",
+    "@google-cloud/local-auth": "^2.1.0",
+    "google-auth-library": "^9.4.0"
   },
   "devDependencies": {
     "eslint": "^8.56.0",
