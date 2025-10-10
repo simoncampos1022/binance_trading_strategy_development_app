@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/trading-platform', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://simoncampos1022:NZAUCFzJIJJVMPy5@fathermonkey.u6lgu45.mongodb.net/trading_platform', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
