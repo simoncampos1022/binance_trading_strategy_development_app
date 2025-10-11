@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
-import { TradingToasts, ApiToasts } from '@/lib/toast';
+import { TradingToasts } from '@/lib/toast';
 
 export default function AuthCallback() {
   const router = useRouter();
