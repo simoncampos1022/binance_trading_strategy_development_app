@@ -10,7 +10,7 @@ import {
   EyeIcon
 } from '@heroicons/react/24/outline';
 import { api } from '@/lib/api';
-import toast from 'react-hot-toast';
+import { TradingToasts, ApiToasts } from '@/lib/toast';
 import IndicatorSelector from './IndicatorSelector';
 import ConditionBuilder from './ConditionBuilder';
 import StrategyPreview from './StrategyPreview';
@@ -70,23 +70,25 @@ export default function StrategyBuilder() {
 
   const handleSave = async () => {
     if (!strategy.name.trim()) {
-      toast.error('Please enter a strategy name');
+      TradingToasts.requiredField('strategy name');
       return;
     }
 
     setLoading(true);
+    const loadingToast = ApiToasts.requestStarted('saving strategy');
+    
     try {
       if (strategy.id) {
         await api.put(`/strategies/${strategy.id}`, strategy);
-        toast.success('Strategy updated successfully!');
+        TradingToasts.strategySaved(strategy.name);
       } else {
         const response = await api.post('/strategies', strategy);
         setStrategy({ ...strategy, id: response.data.strategy._id });
-        toast.success('Strategy saved successfully!');
+        TradingToasts.strategySaved(strategy.name);
       }
       loadStrategies();
     } catch (error: any) {
-      toast.error(error.response?.data?.message || 'Failed to save strategy');
+      TradingToasts.strategyError(error.response?.data?.message);
     } finally {
       setLoading(false);
     }
@@ -95,7 +97,7 @@ export default function StrategyBuilder() {
   const handleLoadStrategy = (selectedStrategy: Strategy) => {
     setStrategy(selectedStrategy);
     setActiveTab('indicators');
-    toast.success('Strategy loaded successfully!');
+    TradingToasts.strategySaved(selectedStrategy.name);
   };
 
   const handleAddIndicator = (indicator: any) => {

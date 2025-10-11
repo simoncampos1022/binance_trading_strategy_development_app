@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
-import toast from 'react-hot-toast';
+import { TradingToasts } from '@/lib/toast';
 
 export default function AuthCallback() {
   const router = useRouter();
@@ -17,7 +17,7 @@ export default function AuthCallback() {
       const error = searchParams.get('error');  
 
       if (error) { 
-        toast.error('Authentication failed. Please try again.');
+        TradingToasts.loginError('Authentication failed. Please try again.');
         router.push('/');
         return;
       }
@@ -36,15 +36,15 @@ export default function AuthCallback() {
           const user = response.data.user;
 
           // Update auth context (this will be handled by the AuthProvider)
-          toast.success('Successfully signed in with Google!');
+          TradingToasts.loginSuccess();
           router.push('/');
         } catch (error) {
           console.error('Auth callback error:', error);
-          toast.error('Failed to complete authentication');
+          TradingToasts.loginError('Failed to complete authentication');
           router.push('/');
         }
       } else {
-        toast.error('Authentication failed');
+        TradingToasts.loginError('Authentication failed');
         router.push('/');
       }
     };

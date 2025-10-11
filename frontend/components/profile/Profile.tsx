@@ -11,7 +11,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { useAuth } from '@/contexts/AuthContext';
 import { useTheme } from '@/contexts/ThemeContext';
-import toast from 'react-hot-toast';
+import { TradingToasts, FormToasts } from '@/lib/toast';
 
 export default function Profile() {
   const { user, updatePreferences } = useAuth();
@@ -28,9 +28,9 @@ export default function Profile() {
     setLoading(true);
     try {
       await updatePreferences(preferences);
-      toast.success('Preferences updated successfully!');
+      FormToasts.formSaved('preferences');
     } catch (error: any) {
-      toast.error(error.message);
+      TradingToasts.strategyError(error.message);
     } finally {
       setLoading(false);
     }

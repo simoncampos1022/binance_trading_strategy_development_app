@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { PlusIcon, TrashIcon, CogIcon } from '@heroicons/react/24/outline';
+import { TradingToasts } from '@/lib/toast';
 
 interface Indicator {
   name: string;
@@ -282,6 +283,7 @@ export default function IndicatorSelector({ indicators, onAdd, onRemove }: Indic
         timeframe
       };
       onAdd(indicator);
+      TradingToasts.indicatorAdded(selectedIndicator.label);
       setShowAddModal(false);
       setSelectedIndicator(null);
       setIndicatorParams({});
@@ -348,7 +350,10 @@ export default function IndicatorSelector({ indicators, onAdd, onRemove }: Indic
                   </div>
                 </div>
                 <button
-                  onClick={() => onRemove(index)}
+                  onClick={() => {
+                    onRemove(index);
+                    TradingToasts.indicatorRemoved(indicator.name);
+                  }}
                   className="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors"
                 >
                   <TrashIcon className="w-4 h-4" />

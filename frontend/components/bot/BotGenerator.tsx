@@ -10,7 +10,7 @@ import {
   DocumentTextIcon
 } from '@heroicons/react/24/outline';
 import { api } from '@/lib/api';
-import toast from 'react-hot-toast';
+import { TradingToasts, ApiToasts } from '@/lib/toast';
 
 interface Strategy {
   _id: string;
@@ -67,19 +67,21 @@ export default function BotGenerator() {
 
   const handleGenerateCode = async () => {
     if (!selectedStrategy) {
-      toast.error('Please select a strategy');
+      TradingToasts.requiredField('strategy');
       return;
     }
 
     setLoading(true);
+    const loadingToast = ApiToasts.requestStarted('generating bot code');
+    
     try {
       const response = await api.post(`/bot/generate/${selectedLanguage}/${selectedStrategy._id}`, {
         config
       });
       setGeneratedCode(response.data.code);
-      toast.success('Bot code generated successfully!');
+      TradingToasts.botGenerated(selectedLanguage);
     } catch (error: any) {
-      toast.error(error.response?.data?.message || 'Failed to generate bot code');
+      TradingToasts.botError(error.response?.data?.message);
     } finally {
       setLoading(false);
     }
@@ -105,9 +107,9 @@ export default function BotGenerator() {
       document.body.removeChild(link);
       window.URL.revokeObjectURL(url);
       
-      toast.success('Bot code downloaded successfully!');
+      TradingToasts.botDownloaded(`${selectedStrategy.name}_${selectedLanguage}`);
     } catch (error: any) {
-      toast.error(error.response?.data?.message || 'Failed to download bot code');
+      TradingToasts.botError(error.response?.data?.message);
     }
   };
 

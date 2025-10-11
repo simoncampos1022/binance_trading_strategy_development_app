@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useAuth } from '@/contexts/AuthContext';
 import { XMarkIcon, EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
-import toast from 'react-hot-toast';
+import { TradingToasts, ApiToasts } from '@/lib/toast';
 
 interface RegisterModalProps {
   onClose: () => void;
@@ -27,12 +27,12 @@ export default function RegisterModal({ onClose, onSwitchToLogin }: RegisterModa
     e.preventDefault();
     
     if (formData.password !== formData.confirmPassword) {
-      toast.error('Passwords do not match');
+      TradingToasts.validationError('passwords do not match');
       return;
     }
 
     if (formData.password.length < 6) {
-      toast.error('Password must be at least 6 characters');
+      TradingToasts.validationError('password must be at least 6 characters');
       return;
     }
 
@@ -40,10 +40,10 @@ export default function RegisterModal({ onClose, onSwitchToLogin }: RegisterModa
 
     try {
       await register(formData.username, formData.email, formData.password);
-      toast.success('Registration successful!');
+      TradingToasts.loginSuccess();
       onClose();
     } catch (error: any) {
-      toast.error(error.message);
+      TradingToasts.loginError(error.message);
     } finally {
       setLoading(false);
     }
