@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useAuth } from '@/contexts/AuthContext';
 import { XMarkIcon, EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
-import toast from 'react-hot-toast';
+import { TradingToasts, ApiToasts } from '@/lib/toast';
 
 interface LoginModalProps {
   onClose: () => void;
@@ -26,10 +26,10 @@ export default function LoginModal({ onClose, onSwitchToRegister }: LoginModalPr
 
     try {
       await login(formData.email, formData.password);
-      toast.success('Login successful!');
+      TradingToasts.loginSuccess();
       onClose();
     } catch (error: any) {
-      toast.error(error.message);
+      TradingToasts.loginError(error.message);
     } finally {
       setLoading(false);
     }
