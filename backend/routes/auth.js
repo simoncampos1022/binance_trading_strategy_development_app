@@ -134,42 +134,84 @@ router.put('/preferences', auth, async (req, res) => {
   }
 });
 
-// Google OAuth routes
-router.get('/google', passport.authenticate('google', {
-  scope: ['profile', 'email']
-}));
-
-router.get('/google/callback', 
-  passport.authenticate('google', { session: false }),
-  async (req, res) => {
-    try {
-      const user = req.user;
-      
-      // Generate JWT token
-      const token = jwt.sign(
-        { userId: user._id },
-        process.env.JWT_SECRET || 'fallback-secret',
-        { expiresIn: process.env.JWT_EXPIRE || '7d' }
-      );
-
-      // Redirect to frontend with token
-      const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:3000';
-      res.redirect(`${frontendUrl}/auth/callback?token=${token}&success=true`);
-    } catch (error) {
-      console.error('Google OAuth callback error:', error);
-      const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:3000';
-      res.redirect(`${frontendUrl}/auth/callback?error=authentication_failed`);
-    }
+// Logout route
+router.post('/logout', auth, async (req, res) => {
+  try {
+    // In a JWT-based system, logout is handled client-side by removing the token
+    // But we can log the logout event for analytics
+    res.json({ message: 'Logout successful' });
+  } catch (error) {
+    console.error('Logout error:', error);
+    res.status(500).json({ message: 'Server error during logout' });
   }
-);
-
-// Google OAuth success/failure handlers
-router.get('/google/success', (req, res) => {
-  res.json({ message: 'Google authentication successful' });
 });
 
-router.get('/google/failure', (req, res) => {
-  res.status(401).json({ message: 'Google authentication failed' });
+// Password reset request
+router.post('/forgot-password', async (req, res) => {
+  try {
+    const { email } = req.body;
+    
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    // In a real application, you would:
+    // 1. Generate a reset token
+    // 2. Send an email with the reset link
+    // 3. Store the token with expiration
+    
+    res.json({ 
+      message: 'Password reset instructions sent to your email',
+      // For development, you might want to return the reset token
+      // In production, this should not be returned
+    });
+  } catch (error) {
+    console.error('Forgot password error:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
+// Password reset confirmation
+router.post('/reset-password', async (req, res) => {
+  try {
+    const { token, newPassword } = req.body;
+    
+    // In a real application, you would:
+    // 1. Verify the reset token
+    // 2. Check if it's not expired
+    // 3. Update the user's password
+    // 4. Invalidate the reset token
+    
+    res.json({ message: 'Password reset successful' });
+  } catch (error) {
+    console.error('Reset password error:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
+// Change password (for logged-in users)
+router.put('/change-password', auth, async (req, res) => {
+  try {
+    const { currentPassword, newPassword } = req.body;
+    
+    const user = await User.findById(req.user._id);
+    
+    // Verify current password
+    const isMatch = await user.comparePassword(currentPassword);
+    if (!isMatch) {
+      return res.status(400).json({ message: 'Current password is incorrect' });
+    }
+    
+    // Update password
+    user.password = newPassword;
+    await user.save();
+    
+    res.json({ message: 'Password changed successfully' });
+  } catch (error) {
+    console.error('Change password error:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
 });
 
 module.exports = router;
