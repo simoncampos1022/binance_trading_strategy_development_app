@@ -373,8 +373,3 @@ For technical support or questions:
 - Review error logs
 - Contact the development team
 - Submit issues on the project repository
-
----
-
-*Last updated: [Current Date]*
-*Version: 1.0.0*
