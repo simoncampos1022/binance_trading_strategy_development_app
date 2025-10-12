@@ -1,5 +1,7 @@
 # Binance Crypto Trading Platform - Frontend Documentation
 
+## Overview
+
 The frontend is a modern React/Next.js application that provides an intuitive interface for cryptocurrency trading strategy development, backtesting, and bot generation. Built with TypeScript, Tailwind CSS, and modern React patterns, it offers a responsive and user-friendly experience for both novice and advanced traders.
 
 ## Architecture
@@ -17,3 +19,51 @@ The frontend is a modern React/Next.js application that provides an intuitive in
 - **Notifications**: React Hot Toast
 - **Animations**: Framer Motion
 - **Icons**: Lucide React, Heroicons
+
+
+### Project Structure
+```
+frontend/
+├── app/                    # Next.js App Router
+│   ├── auth/
+│   │   └── callback/      # OAuth callback page
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx        # Root layout
+│   └── page.tsx          # Home page
+├── components/            # React components
+│   ├── auth/             # Authentication components
+│   │   ├── LoginModal.tsx
+│   │   └── RegisterModal.tsx
+│   ├── backtest/         # Backtesting components
+│   │   └── BacktestResults.tsx
+│   ├── bot/              # Bot generation components
+│   │   └── BotGenerator.tsx
+│   ├── demo/             # Demo components
+│   │   └── ToastDemo.tsx
+│   ├── layout/           # Layout components
+│   │   ├── Header.tsx
+│   │   └── Sidebar.tsx
+│   ├── profile/          # User profile components
+│   │   └── Profile.tsx
+│   ├── strategy/         # Strategy building components
+│   │   ├── ConditionBuilder.tsx
+│   │   ├── IndicatorSelector.tsx
+│   │   ├── StrategyBuilder.tsx
+│   │   └── StrategyPreview.tsx
+│   ├── Dashboard.tsx     # Main dashboard
+│   └── LandingPage.tsx   # Landing page
+├── contexts/             # React contexts
+│   ├── AuthContext.tsx   # Authentication state
+│   └── ThemeContext.tsx   # Theme management
+├── hooks/               # Custom hooks
+│   └── useToast.ts       # Toast notifications
+├── lib/                 # Utility libraries
+│   ├── api.ts           # API client
+│   └── toast.ts         # Toast utilities
+├── styles/              # Additional styles
+│   └── toast.css        # Toast animations
+├── next.config.js       # Next.js configuration
+├── tailwind.config.js   # Tailwind configuration
+├── tsconfig.json        # TypeScript configuration
+└── package.json         # Dependencies
+```
