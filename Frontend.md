@@ -91,3 +91,10 @@ frontend/
 - **Visual Results**: Interactive charts and graphs
 - **Trade Analysis**: Detailed trade history
 - **Portfolio Simulation**: Realistic trading simulation
+
+### 4. Bot Generator
+- **Code Generation**: Python and JavaScript bots
+- **Configuration Management**: API keys, trading parameters
+- **Deployment Ready**: Production-ready code
+- **Documentation**: Built-in deployment instructions
+- **Download Support**: Direct file download
