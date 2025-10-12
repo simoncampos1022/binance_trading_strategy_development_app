@@ -67,3 +67,20 @@ frontend/
 ├── tsconfig.json        # TypeScript configuration
 └── package.json         # Dependencies
 ```
+
+## Key Features
+
+### 1. Authentication System
+- **JWT-based Authentication**: Secure token-based authentication
+- **User Registration/Login**: Complete user management
+- **OAuth Integration**: Google OAuth support
+- **Session Management**: Persistent login state
+- **Password Management**: Change password functionality
+
+### 2. Strategy Builder
+- **Visual Strategy Creation**: Drag-and-drop interface
+- **Technical Indicators**: 50+ built-in indicators
+- **Condition Builder**: Complex buy/sell conditions
+- **Risk Management**: Stop loss, take profit, position sizing
+- **Strategy Preview**: Real-time strategy visualization
+- **Code Generation**: Python/JavaScript code export
