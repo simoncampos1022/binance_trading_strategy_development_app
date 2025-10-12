@@ -84,3 +84,10 @@ frontend/
 - **Risk Management**: Stop loss, take profit, position sizing
 - **Strategy Preview**: Real-time strategy visualization
 - **Code Generation**: Python/JavaScript code export
+
+### 3. Backtesting Engine
+- **Historical Data**: Multiple timeframes and symbols
+- **Performance Metrics**: Sharpe ratio, max drawdown, win rate
+- **Visual Results**: Interactive charts and graphs
+- **Trade Analysis**: Detailed trade history
+- **Portfolio Simulation**: Realistic trading simulation
