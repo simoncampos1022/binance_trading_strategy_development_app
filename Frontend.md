@@ -204,3 +204,10 @@ Custom design system with:
 - **Tablet Support**: Medium screen optimizations
 - **Desktop**: Full-featured desktop experience
 - **Sidebar Navigation**: Collapsible sidebar for mobile
+
+## State Management
+
+### Local State
+- **useState**: Component-level state
+- **useEffect**: Side effects and lifecycle
+- **Custom Hooks**: Reusable state logic
