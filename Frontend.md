@@ -222,3 +222,11 @@ Custom design system with:
 2. State changes trigger API calls
 3. API responses update component state
 4. UI re-renders with new data
+
+## Performance Optimizations
+
+### Next.js Features
+- **App Router**: Latest Next.js routing
+- **Server Components**: Reduced client-side JavaScript
+- **Image Optimization**: Automatic image optimization
+- **Code Splitting**: Automatic code splitting
