@@ -216,3 +216,9 @@ Custom design system with:
 - **AuthContext**: User authentication
 - **ThemeContext**: Application theme
 - **API State**: Server state management
+
+### Data Flow
+1. User interactions trigger state updates
+2. State changes trigger API calls
+3. API responses update component state
+4. UI re-renders with new data
