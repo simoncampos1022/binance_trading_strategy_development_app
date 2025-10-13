@@ -173,3 +173,11 @@ Centralized API communication:
 - Automatic token management
 - Request/response interceptors
 - Error handling
+
+
+### API Endpoints
+- **Authentication**: `/api/auth/*`
+- **Strategies**: `/api/strategies/*`
+- **Backtesting**: `/api/backtest/*`
+- **Bot Management**: `/api/bot/*`
+- **Market Data**: `/api/data/*`
