@@ -211,3 +211,8 @@ Custom design system with:
 - **useState**: Component-level state
 - **useEffect**: Side effects and lifecycle
 - **Custom Hooks**: Reusable state logic
+
+### Global State
+- **AuthContext**: User authentication
+- **ThemeContext**: Application theme
+- **API Sta
