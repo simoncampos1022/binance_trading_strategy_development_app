@@ -163,3 +163,13 @@ interface ThemeContextType {
   toggleTheme: () => void;
 }
 ```
+
+
+## API Integration
+
+### API Client (`lib/api.ts`)
+Centralized API communication:
+- Axios-based HTTP client
+- Automatic token management
+- Request/response interceptors
+- Error handling
