@@ -151,3 +151,15 @@ interface AuthContextType {
   logout: () => void;
   updatePreferences: (preferences: Partial<User['preferences']>) => Promise<void>;
 }
+
+
+```
+
+#### ThemeContext (`contexts/ThemeContext.tsx`)
+Manages application theme:
+```typescript
+interface ThemeContextType {
+  theme: 'light' | 'dark';
+  toggleTheme: () => void;
+}
+```
