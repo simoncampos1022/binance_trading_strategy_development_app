@@ -130,3 +130,8 @@ Trading bot code generation:
 - Language selection (Python/JavaScript)
 - Configuration management
 - Code generation and download
+
+#### Authentication Components
+- **LoginModal**: User login interface
+- **RegisterModal**: User registration interface
+- **AuthContext**: Global authentication state management
