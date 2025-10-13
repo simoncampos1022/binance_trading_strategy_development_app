@@ -181,3 +181,13 @@ Centralized API communication:
 - **Backtesting**: `/api/backtest/*`
 - **Bot Management**: `/api/bot/*`
 - **Market Data**: `/api/data/*`
+
+
+## Styling & UI
+
+### Tailwind CSS Configuration
+Custom design system with:
+- **Color Palette**: Primary, success, danger, warning colors
+- **Animations**: Fade-in, slide-up, pulse effects
+- **Responsive Design**: Mobile-first approach
+- **Dark Mode**: Complete dark theme support
