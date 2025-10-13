@@ -123,3 +123,10 @@ Comprehensive strategy development interface:
 - Buy/sell condition builder
 - Risk management settings
 - Strategy preview
+
+#### Bot Generator (`components/bot/BotGenerator.tsx`)
+Trading bot code generation:
+- Strategy selection
+- Language selection (Python/JavaScript)
+- Configuration management
+- Code generation and download
