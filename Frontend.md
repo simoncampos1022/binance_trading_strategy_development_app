@@ -135,3 +135,19 @@ Trading bot code generation:
 - **LoginModal**: User login interface
 - **RegisterModal**: User registration interface
 - **AuthContext**: Global authentication state management
+
+
+
+### Context Providers
+
+#### AuthContext (`contexts/AuthContext.tsx`)
+Manages user authentication state:
+```typescript
+interface AuthContextType {
+  user: User | null;
+  loading: boolean;
+  login: (email: string, password: string) => Promise<void>;
+  register: (username: string, email: string, password: string) => Promise<void>;
+  logout: () => void;
+  updatePreferences: (preferences: Partial<User['preferences']>) => Promise<void>;
+}
