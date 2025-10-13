@@ -115,3 +115,11 @@ Main application interface with tabbed navigation:
 - Backtesting tab
 - Bot Generator tab
 - Profile tab
+
+#### Strategy Builder (`components/strategy/StrategyBuilder.tsx`)
+Comprehensive strategy development interface:
+- Strategy information form
+- Indicator selection
+- Buy/sell condition builder
+- Risk management settings
+- Strategy preview
