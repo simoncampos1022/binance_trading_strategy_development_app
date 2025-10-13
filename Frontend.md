@@ -104,3 +104,14 @@ frontend/
 - **Portfolio Overview**: Account balance and positions
 - **Performance Tracking**: Strategy performance metrics
 - **Risk Monitoring**: Real-time risk assessment
+
+## Component Architecture
+
+### Core Components
+
+#### Dashboard (`components/Dashboard.tsx`)
+Main application interface with tabbed navigation:
+- Strategy Builder tab
+- Backtesting tab
+- Bot Generator tab
+- Profile tab
