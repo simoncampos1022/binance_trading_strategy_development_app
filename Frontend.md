@@ -288,3 +288,15 @@ NEXT_PUBLIC_API_URL=http://localhost:5000/api
 - **User Flows**: Complete user journey testing
 - **API Integration**: Backend integration testing
 - **Cross-browser**: Multi-browser compatibility
+
+
+## Deployment
+
+### Build Process
+```bash
+# Production build
+npm run build
+
+# Static export (if needed)
+npm run export
+```
