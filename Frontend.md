@@ -271,9 +271,20 @@ npm run lint
 NEXT_PUBLIC_API_URL=http://localhost:5000/api
 ```
 
-
 ### Code Quality
 - **TypeScript**: Full type safety
 - **ESLint**: Code linting
 - **Prettier**: Code formatting
 - **Husky**: Git hooks
+
+## Testing Strategy
+
+### Component Testing
+- **Unit Tests**: Individual component testing
+- **Integration Tests**: Component interaction testing
+- **Snapshot Tests**: UI regression testing
+
+### E2E Testing
+- **User Flows**: Complete user journey testing
+- **API Integration**: Backend integration testing
+- **Cross-browser**: Multi-browser compatibility
