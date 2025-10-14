@@ -262,4 +262,11 @@ npm start
 
 # Run linting
 npm run lint
+
+```
+
+### Environment Configuration
+```bash
+# Environment variables
+NEXT_PUBLIC_API_URL=http://localhost:5000/api
 ```
