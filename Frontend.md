@@ -256,3 +256,10 @@ npm run dev
 
 # Build for production
 npm run build
+
+# Start production server
+npm start
+
+# Run linting
+npm run lint
+```
