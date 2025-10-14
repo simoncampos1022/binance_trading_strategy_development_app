@@ -270,3 +270,10 @@ npm run lint
 # Environment variables
 NEXT_PUBLIC_API_URL=http://localhost:5000/api
 ```
+
+
+### Code Quality
+- **TypeScript**: Full type safety
+- **ESLint**: Code linting
+- **Prettier**: Code formatting
+- **Husky**: Git hooks
