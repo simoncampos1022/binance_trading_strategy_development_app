@@ -242,3 +242,10 @@ Custom design system with:
 - **Dynamic Imports**: Code splitting
 - **Compression**: Gzip/Brotli compression
 - **Caching**: Browser and CDN caching
+
+## Development Workflow
+
+### Development Setup
+```bash
+# Install dependencies
+npm install
