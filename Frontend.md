@@ -327,3 +327,11 @@ NEXT_PUBLIC_API_URL=https://api.tradingplatform.com/api
 - **Request Validation**: Input validation
 - **Error Handling**: Secure error messages
 - **HTTPS**: Encrypted communication
+
+## Accessibility
+
+### WCAG Compliance
+- **Keyboard Navigation**: Full keyboard support
+- **Screen Readers**: ARIA labels and roles
+- **Color Contrast**: WCAG AA compliance
+- **Focus Management**: Proper focus handling
