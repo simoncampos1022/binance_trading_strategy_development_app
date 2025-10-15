@@ -306,3 +306,9 @@ npm run export
 - **Netlify**: Static site deployment
 - **AWS**: S3 + CloudFront
 - **Docker**: Containerized deployment
+
+### Environment Variables
+```bash
+# Production environment
+NEXT_PUBLIC_API_URL=https://api.tradingplatform.com/api
+```
