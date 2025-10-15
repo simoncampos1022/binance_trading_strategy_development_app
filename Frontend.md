@@ -300,3 +300,9 @@ npm run build
 # Static export (if needed)
 npm run export
 ```
+
+### Deployment Options
+- **Vercel**: Recommended for Next.js
+- **Netlify**: Static site deployment
+- **AWS**: S3 + CloudFront
+- **Docker**: Containerized deployment
