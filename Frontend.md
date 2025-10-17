@@ -350,3 +350,9 @@ NEXT_PUBLIC_API_URL=https://api.tradingplatform.com/api
 - **Firefox**: 88+
 - **Safari**: 14+
 - **Edge**: 90+
+
+
+### Polyfills
+- **ES6+ Features**: Modern JavaScript support
+- **CSS Grid**: Fallback for older browsers
+- **Fetch API**: Polyfill for older browsers
