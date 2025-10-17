@@ -364,3 +364,9 @@ NEXT_PUBLIC_API_URL=https://api.tradingplatform.com/api
 - **LCP**: Largest Contentful Paint < 2.5s
 - **FID**: First Input Delay < 100ms
 - **CLS**: Cumulative Layout Shift < 0.1
+
+### Optimization Strategies
+- **Image Optimization**: WebP format, lazy loading
+- **Code Splitting**: Route-based splitting
+- **Caching**: Aggressive caching strategy
+- **CDN**: Global content delivery
