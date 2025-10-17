@@ -356,3 +356,11 @@ NEXT_PUBLIC_API_URL=https://api.tradingplatform.com/api
 - **ES6+ Features**: Modern JavaScript support
 - **CSS Grid**: Fallback for older browsers
 - **Fetch API**: Polyfill for older browsers
+
+
+## Performance Metrics
+
+### Core Web Vitals
+- **LCP**: Largest Contentful Paint < 2.5s
+- **FID**: First Input Delay < 100ms
+- **CLS**: Cumulative Layout Shift < 0.1
