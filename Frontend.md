@@ -342,3 +342,11 @@ NEXT_PUBLIC_API_URL=https://api.tradingplatform.com/api
 - **Error Messages**: Helpful error messages
 - **Success Feedback**: Confirmation messages
 - **Responsive Design**: Mobile accessibility
+
+## Browser Support
+
+### Supported Browsers
+- **Chrome**: 90+
+- **Firefox**: 88+
+- **Safari**: 14+
+- **Edge**: 90+
