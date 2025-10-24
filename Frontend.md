@@ -398,3 +398,11 @@ NEXT_PUBLIC_API_URL=https://api.tradingplatform.com/api
 - **Offline Support**: Service worker implementation
 - **Micro-frontends**: Modular architecture
 - **GraphQL**: Advanced data fetching
+
+## Contributing
+
+### Development Guidelines
+- **Code Style**: ESLint + Prettier
+- **Commit Messages**: Conventional commits
+- **Pull Requests**: Detailed descriptions
+- **Testing**: Comprehensive test coverage
