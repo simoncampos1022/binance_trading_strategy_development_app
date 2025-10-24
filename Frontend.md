@@ -406,3 +406,9 @@ NEXT_PUBLIC_API_URL=https://api.tradingplatform.com/api
 - **Commit Messages**: Conventional commits
 - **Pull Requests**: Detailed descriptions
 - **Testing**: Comprehensive test coverage
+
+### Code Review Process
+- **Automated Checks**: CI/CD pipeline
+- **Manual Review**: Peer code review
+- **Testing**: Automated and manual testing
+- **Documentation**: Updated documentation
