@@ -54,3 +54,12 @@ backend/
 - `POST /forgot-password` - Password reset request
 - `POST /reset-password` - Password reset confirmation
 - `PUT /change-password` - Change password
+
+### Strategies (`/api/strategies`)
+- `GET /` - Get user strategies
+- `POST /` - Create new strategy
+- `GET /:id` - Get strategy details
+- `PUT /:id` - Update strategy
+- `DELETE /:id` - Delete strategy
+- `GET /public` - Get public strategies
+- `POST /:id/clone` - Clone strategy
