@@ -399,6 +399,14 @@ NEXT_PUBLIC_API_URL=https://api.tradingplatform.com/api
 - **Micro-frontends**: Modular architecture
 - **GraphQL**: Advanced data fetching
 
+## Contributing
+
+### Development Guidelines
+- **Code Style**: ESLint + Prettier
+- **Commit Messages**: Conventional commits
+- **Pull Requests**: Detailed descriptions
+- **Testing**: Comprehensive test coverage
+
 ### Code Review Process
 - **Automated Checks**: CI/CD pipeline
 - **Manual Review**: Peer code review
