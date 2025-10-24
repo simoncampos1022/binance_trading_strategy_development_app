@@ -42,3 +42,15 @@ backend/
 │   └── strategyEngine.js    # Strategy execution
 └── server.js         # Main server file
 ```
+
+## API Endpoints
+
+### Authentication (`/api/auth`)
+- `POST /register` - User registration
+- `POST /login` - User login
+- `GET /me` - Get current user profile
+- `PUT /preferences` - Update user preferences
+- `POST /logout` - User logout
+- `POST /forgot-password` - Password reset request
+- `POST /reset-password` - Password reset confirmation
+- `PUT /change-password` - Change password
