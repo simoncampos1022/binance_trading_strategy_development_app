@@ -63,3 +63,9 @@ backend/
 - `DELETE /:id` - Delete strategy
 - `GET /public` - Get public strategies
 - `POST /:id/clone` - Clone strategy
+
+### Backtesting (`/api/backtest`)
+- `POST /` - Start new backtest
+- `GET /` - Get user backtests
+- `GET /:id` - Get backtest results
+- `DELETE /:id` - Cancel/delete backtest
