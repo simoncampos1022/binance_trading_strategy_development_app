@@ -69,3 +69,10 @@ backend/
 - `GET /` - Get user backtests
 - `GET /:id` - Get backtest results
 - `DELETE /:id` - Cancel/delete backtest
+
+### Bot Management (`/api/bot`)
+- `POST /generate` - Generate trading bot code
+- `GET /` - Get user bots
+- `POST /deploy` - Deploy bot
+- `PUT /:id/start` - Start bot
+- `PUT /:id/stop` - Stop bot
