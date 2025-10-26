@@ -83,3 +83,26 @@ backend/
 - `GET /ohlcv/:symbol` - Get OHLCV data
 - `GET /indicators` - Get available indicators
 - `POST /calculate-indicator` - Calculate technical indicators
+
+## Data Models
+
+### User Model
+```javascript
+{
+  username: String (unique, required)
+  email: String (unique, required)
+  password: String (hashed)
+  googleId: String (for OAuth)
+  isVerified: Boolean
+  strategies: [ObjectId] (references to Strategy)
+  preferences: {
+    defaultTimeframe: String
+    defaultExchange: String
+    theme: String
+  }
+  subscription: {
+    plan: String (free/pro/enterprise)
+    expiresAt: Date
+  }
+}
+```
