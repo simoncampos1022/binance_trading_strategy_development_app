@@ -76,3 +76,10 @@ backend/
 - `POST /deploy` - Deploy bot
 - `PUT /:id/start` - Start bot
 - `PUT /:id/stop` - Stop bot
+
+
+### Market Data (`/api/data`)
+- `GET /symbols` - Get available trading symbols
+- `GET /ohlcv/:symbol` - Get OHLCV data
+- `GET /indicators` - Get available indicators
+- `POST /calculate-indicator` - Calculate technical indicators
