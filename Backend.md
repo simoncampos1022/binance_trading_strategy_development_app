@@ -106,3 +106,37 @@ backend/
   }
 }
 ```
+
+
+### Strategy Model
+```javascript
+{
+  name: String (required)
+  description: String
+  author: ObjectId (User reference)
+  isPublic: Boolean
+  category: String (trend/momentum/mean_reversion/arbitrage/custom)
+  symbols: [String] (trading pairs)
+  timeframes: [String] (1m, 5m, 1h, 1d, etc.)
+  indicators: [IndicatorSchema]
+  buyConditions: [ConditionSchema]
+  sellConditions: [ConditionSchema]
+  riskManagement: {
+    stopLoss: Number
+    takeProfit: Number
+    maxPositionSize: Number
+    maxDrawdown: Number
+  }
+  backtestResults: {
+    totalReturn: Number
+    sharpeRatio: Number
+    maxDrawdown: Number
+    winRate: Number
+    totalTrades: Number
+  }
+  code: {
+    python: String
+    javascript: String
+  }
+}
+```
