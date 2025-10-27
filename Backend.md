@@ -247,3 +247,10 @@ NODE_ENV=development
 BINANCE_API_KEY=your-api-key
 BINANCE_SECRET_KEY=your-secret-key
 ```
+
+## Development Setup
+
+### Prerequisites
+- Node.js (v14 or higher)
+- MongoDB (local or cloud)
+- npm or yarn
