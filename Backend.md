@@ -167,3 +167,12 @@ backend/
   status: String (running/completed/failed/cancelled)
 }
 ```
+
+## Core Services
+
+### Backtest Engine
+- Historical data processing
+- Strategy execution simulation
+- Performance metrics calculation
+- Risk management implementation
+- Trade logging and analysis
