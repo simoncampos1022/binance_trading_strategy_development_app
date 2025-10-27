@@ -254,3 +254,20 @@ BINANCE_SECRET_KEY=your-secret-key
 - Node.js (v14 or higher)
 - MongoDB (local or cloud)
 - npm or yarn
+
+
+### Installation
+```bash
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your configuration
+
+# Start development server
+npm run dev
+
+# Start production server
+npm start
+```
