@@ -197,3 +197,11 @@ backend/
 - Performance optimization
 - Multiple timeframe support
 - Real-time updates
+
+
+### Strategy Engine
+- Strategy validation
+- Condition evaluation
+- Signal generation
+- Risk management
+- Portfolio optimization
