@@ -183,3 +183,10 @@ backend/
 - Real-time strategy execution
 - Error handling and logging
 - Performance monitoring
+
+### Data Service
+- Real-time market data
+- Historical data retrieval
+- Multiple exchange support
+- Data caching and optimization
+- WebSocket connections
