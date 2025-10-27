@@ -271,3 +271,8 @@ npm run dev
 # Start production server
 npm start
 ```
+
+### Available Scripts
+- `npm run dev` - Start development server with nodemon
+- `npm start` - Start production server
+- `npm test` - Run tests
