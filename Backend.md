@@ -220,3 +220,9 @@ backend/
 - User-specific data access
 - Strategy ownership validation
 - API rate limiting
+
+### Data Protection
+- Input validation and sanitization
+- SQL injection prevention
+- XSS protection
+- CORS configuration
