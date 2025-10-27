@@ -190,3 +190,10 @@ backend/
 - Multiple exchange support
 - Data caching and optimization
 - WebSocket connections
+
+### Indicator Service
+- Technical indicator calculations
+- Custom indicator support
+- Performance optimization
+- Multiple timeframe support
+- Real-time updates
