@@ -140,3 +140,30 @@ backend/
   }
 }
 ```
+
+
+### Backtest Model
+```javascript
+{
+  strategy: ObjectId (Strategy reference)
+  user: ObjectId (User reference)
+  name: String
+  symbol: String
+  timeframe: String
+  startDate: Date
+  endDate: Date
+  initialCapital: Number
+  results: {
+    totalReturn: Number
+    totalReturnPercent: Number
+    sharpeRatio: Number
+    maxDrawdown: Number
+    winRate: Number
+    totalTrades: Number
+    // ... more metrics
+  }
+  trades: [TradeSchema]
+  equityCurve: [EquityPointSchema]
+  status: String (running/completed/failed/cancelled)
+}
+```
