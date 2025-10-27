@@ -176,3 +176,10 @@ backend/
 - Performance metrics calculation
 - Risk management implementation
 - Trade logging and analysis
+
+### Bot Generator
+- Python/JavaScript code generation
+- Exchange API integration
+- Real-time strategy execution
+- Error handling and logging
+- Performance monitoring
