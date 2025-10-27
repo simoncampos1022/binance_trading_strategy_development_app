@@ -226,3 +226,24 @@ backend/
 - SQL injection prevention
 - XSS protection
 - CORS configuration
+
+
+## Environment Configuration
+
+### Required Environment Variables
+```bash
+# Database
+MONGODB_URI=mongodb://localhost:27017/trading-platform
+
+# Authentication
+JWT_SECRET=your-secret-key
+JWT_EXPIRE=7d
+
+# Server
+PORT=5000
+NODE_ENV=development
+
+# Exchange APIs (optional)
+BINANCE_API_KEY=your-api-key
+BINANCE_SECRET_KEY=your-secret-key
+```
