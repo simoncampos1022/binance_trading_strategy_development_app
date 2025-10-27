@@ -213,3 +213,10 @@ backend/
 - Password hashing with bcrypt
 - Token expiration handling
 - Secure password requirements
+
+
+### Authorization
+- Route-level protection
+- User-specific data access
+- Strategy ownership validation
+- API rate limiting
