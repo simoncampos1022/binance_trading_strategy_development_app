@@ -205,3 +205,11 @@ backend/
 - Signal generation
 - Risk management
 - Portfolio optimization
+
+## Security Features
+
+### Authentication
+- JWT-based authentication
+- Password hashing with bcrypt
+- Token expiration handling
+- Secure password requirements
