@@ -294,3 +294,12 @@ All API responses follow a consistent format:
   "data": { ... },
   "message": "Success message"
 }
+
+
+// Error
+{
+  "success": false,
+  "error": "Error message",
+  "code": "ERROR_CODE"
+}
+```
