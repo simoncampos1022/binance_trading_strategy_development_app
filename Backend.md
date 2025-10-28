@@ -303,3 +303,7 @@ All API responses follow a consistent format:
   "code": "ERROR_CODE"
 }
 ```
+### Rate Limiting
+- Authentication endpoints: 5 requests per minute
+- Data endpoints: 100 requests per minute
+- Strategy endpoints: 20 requests per minute
