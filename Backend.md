@@ -283,3 +283,7 @@ npm start
 1. Register/Login to get JWT token
 2. Include token in Authorization header: `Bearer <token>`
 3. Token expires after configured time (default: 7 days)
+
+### Error Handling
+All API responses follow a consistent format:
+```javascript
