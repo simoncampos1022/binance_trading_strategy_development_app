@@ -287,3 +287,10 @@ npm start
 ### Error Handling
 All API responses follow a consistent format:
 ```javascript
+
+// Success
+{
+  "success": true,
+  "data": { ... },
+  "message": "Success message"
+}
