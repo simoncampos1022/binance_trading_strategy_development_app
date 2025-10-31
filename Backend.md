@@ -350,3 +350,11 @@ COPY . .
 EXPOSE 5000
 CMD ["npm", "start"]
 ```
+
+## Contributing
+
+### Code Standards
+- ESLint configuration
+- Prettier formatting
+- JSDoc documentation
+- Test coverage requirements
