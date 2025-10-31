@@ -340,7 +340,6 @@ All API responses follow a consistent format:
 - Performance metrics
 - Security event logging
 
-
 ### Docker Support
 ```dockerfile
 FROM node:18-alpine
