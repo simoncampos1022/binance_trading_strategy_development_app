@@ -315,7 +315,6 @@ All API responses follow a consistent format:
 - Connection pooling
 - Query optimization
 
-
 ### Caching Strategy
 - Redis for session storage
 - In-memory caching for frequently accessed data
