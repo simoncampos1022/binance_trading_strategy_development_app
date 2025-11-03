@@ -20,4 +20,9 @@ const backtestSchema = new mongoose.Schema({
     ref: 'Strategy',
     required: true
   },
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
 });
