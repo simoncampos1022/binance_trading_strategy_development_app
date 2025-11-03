@@ -37,4 +37,8 @@ const backtestSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  startDate: {
+    type: Date,
+    required: true
+  },
 });
