@@ -14,7 +14,7 @@ The backend is a Node.js/Express.js API server that powers a comprehensive crypt
 - **Crypto Integration**: CCXT library for exchange connectivity
 - **Real-time**: WebSocket support
 - **Scheduling**: Node-cron for automated tasks
-
+ 
 
 ### Project Structure
 ```
@@ -314,7 +314,6 @@ All API responses follow a consistent format:
 - Aggregation pipelines for complex operations
 - Connection pooling
 - Query optimization
-
 
 ### Caching Strategy
 - Redis for session storage
