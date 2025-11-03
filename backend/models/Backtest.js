@@ -13,3 +13,11 @@ const tradeSchema = new mongoose.Schema({
   pnl: Number,
   reason: String
 });
+
+const backtestSchema = new mongoose.Schema({
+  strategy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Strategy',
+    required: true
+  },
+});
