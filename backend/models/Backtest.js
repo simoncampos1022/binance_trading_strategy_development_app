@@ -9,4 +9,5 @@ const tradeSchema = new mongoose.Schema({
     enum: ['buy', 'sell']
   },
   price: Number,
+  quantity: Number,
 });
