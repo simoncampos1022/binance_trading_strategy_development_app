@@ -11,4 +11,5 @@ const tradeSchema = new mongoose.Schema({
   price: Number,
   quantity: Number,
   pnl: Number,
+  reason: String
 });
