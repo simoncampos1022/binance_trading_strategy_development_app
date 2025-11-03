@@ -29,4 +29,8 @@ const backtestSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  symbol: {
+    type: String,
+    required: true
+  },
 });
