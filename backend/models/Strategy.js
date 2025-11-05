@@ -5,5 +5,8 @@ const indicatorSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  
+  parameters: {
+    type: Map,
+    of: mongoose.Schema.Types.Mixed
+  },
 });
