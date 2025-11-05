@@ -9,4 +9,8 @@ const indicatorSchema = new mongoose.Schema({
     type: Map,
     of: mongoose.Schema.Types.Mixed
   },
+  timeframe: {
+    type: String,
+    required: true
+  }
 });
