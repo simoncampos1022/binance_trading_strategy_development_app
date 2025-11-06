@@ -26,4 +26,11 @@ const conditionSchema = new mongoose.Schema({
     enum: ['AND', 'OR'],
     default: 'AND'
   },
+  conditions: [{
+    indicator: {
+      type: String,
+      required: true
+    },
+    
+  }]
 });
