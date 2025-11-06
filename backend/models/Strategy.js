@@ -14,3 +14,11 @@ const indicatorSchema = new mongoose.Schema({
     required: true
   }
 });
+
+const conditionSchema = new mongoose.Schema({
+  type: {
+    type: String,
+    enum: ['buy', 'sell', 'hold'],
+    required: true
+  },
+});
