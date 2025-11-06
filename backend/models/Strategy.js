@@ -21,4 +21,9 @@ const conditionSchema = new mongoose.Schema({
     enum: ['buy', 'sell', 'hold'],
     required: true
   },
+  logic: {
+    type: String,
+    enum: ['AND', 'OR'],
+    default: 'AND'
+  },
 });
