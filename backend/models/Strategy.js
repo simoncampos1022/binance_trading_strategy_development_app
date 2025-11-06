@@ -31,6 +31,10 @@ const conditionSchema = new mongoose.Schema({
       type: String,
       required: true
     },
-    
+    operator: {
+      type: String,
+      enum: ['>', '<', '>=', '<=', '==', '!=', 'crosses_above', 'crosses_below'],
+      required: true
+    },
   }]
 });
