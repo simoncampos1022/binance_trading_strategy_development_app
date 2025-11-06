@@ -36,5 +36,9 @@ const conditionSchema = new mongoose.Schema({
       enum: ['>', '<', '>=', '<=', '==', '!=', 'crosses_above', 'crosses_below'],
       required: true
     },
+    value: {
+      type: mongoose.Schema.Types.Mixed,
+      required: true
+    },
   }]
 });
